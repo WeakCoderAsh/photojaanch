@@ -4,18 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PhotoTaiyaar — NEET JEE Live Photo Practice | Form Se Pehle Taiyaari</title>
-<meta name="description" content="NEET aur JEE form ke live photo ki ghar baithe practice karo. Camera test, chehra-roshni-background ki poori jaanch, bilkul free, bina limit. Photo phone se bahar nahi jata.">
+<meta name="description" content="NEET aur JEE form ke live photo ki ghar baithe practice karo. Chehra, roshni, background, munh, nazar, photo ki date — har galti pehle pakdo. Bilkul free, photo phone se bahar nahi jata.">
 <meta property="og:title" content="PhotoTaiyaar — Live Photo Pehli Baar Me Sahi">
-<meta property="og:description" content="Form bharne se pehle live photo ki practice — chehra, roshni, background ki poori jaanch, bilkul free.">
+<meta property="og:description" content="Form bharne se pehle live photo ki poori jaanch — har galti, pehle hi. Bilkul free.">
 <meta property="og:type" content="website">
 <style>
 :root{
-  --bg:#05080a; --panel:rgba(255,255,255,.045); --panel2:rgba(255,255,255,.07);
-  --line:rgba(255,255,255,.10); --txt:#eef6f1; --dim:#9fb8ab;
+  --bg:#05080a; --panel:rgba(255,255,255,.045); --line:rgba(255,255,255,.10);
+  --txt:#eef6f1; --dim:#9fb8ab;
   --g1:#22c55e; --g2:#14b8a6; --g3:#38bdf8;
   --grad:linear-gradient(92deg,var(--g1),var(--g2) 55%,var(--g3));
-  --ok:#34d399; --warn:#fbbf24; --bad:#f87171;
-  --r:20px;
+  --ok:#34d399; --bad:#f87171; --r:20px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -24,101 +23,102 @@ body{background:var(--bg);color:var(--txt);font-family:'Segoe UI',system-ui,-app
   radial-gradient(560px 380px at 12% -6%,rgba(34,197,94,.20),transparent 62%),
   radial-gradient(640px 420px at 88% -10%,rgba(56,189,248,.17),transparent 62%),
   radial-gradient(700px 500px at 50% 115%,rgba(20,184,166,.12),transparent 62%),var(--bg)}
-.grid{position:fixed;inset:0;z-index:-1;opacity:.35;background:
+.gridbg{position:fixed;inset:0;z-index:-1;opacity:.35;background:
   linear-gradient(rgba(125,211,252,.05) 1px,transparent 1px),
   linear-gradient(90deg,rgba(125,211,252,.05) 1px,transparent 1px);
   background-size:44px 44px;
   -webkit-mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 30%,transparent 75%);
   mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 30%,transparent 75%)}
-.wrap{max-width:1060px;margin:0 auto;padding:28px 18px 60px}
-header{text-align:center;padding:26px 0 8px}
-.eyebrow{display:inline-block;padding:7px 16px;border:1px solid var(--line);border-radius:999px;background:var(--panel);font-size:13px;letter-spacing:.4px;color:var(--dim)}
-.eyebrow b{color:var(--g1);font-weight:700}
-h1{font-size:clamp(32px,6vw,54px);line-height:1.12;font-weight:800;margin:18px 0 10px}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 18px 56px}
+header{text-align:center;padding:22px 0 4px}
+.eyebrow{display:inline-block;padding:7px 16px;border:1px solid var(--line);border-radius:999px;background:var(--panel);font-size:13px;color:var(--dim)}
+.eyebrow b{color:var(--g1)}
+h1{font-size:clamp(31px,6vw,50px);line-height:1.12;font-weight:800;margin:16px 0 8px}
 h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.sub{color:var(--dim);font-size:clamp(15px,2.4vw,18px);max-width:640px;margin:0 auto}
-.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:20px 0 6px}
+.sub{color:var(--dim);font-size:clamp(15px,2.4vw,17.5px);max-width:620px;margin:0 auto}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:18px 0 4px}
 .chip{padding:8px 14px;border-radius:999px;background:var(--panel);border:1px solid var(--line);font-size:13.5px}
 .chip b{color:var(--g3)}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:22px;margin-top:22px;backdrop-filter:blur(8px)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:22px;margin-top:20px;backdrop-filter:blur(8px)}
 .card h2{font-size:21px;margin-bottom:4px}
-.card .hint{color:var(--dim);font-size:14px;margin-bottom:16px}
-.tabs{display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap}
-.tab{flex:1;min-width:200px;padding:13px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--txt);font-size:15.5px;font-weight:600;cursor:pointer;transition:border-color .25s,background .25s,transform .15s}
+.card .hint{color:var(--dim);font-size:14px;margin-bottom:14px}
+.rules{font-size:13.5px;color:var(--dim);background:rgba(56,189,248,.07);border:1px solid rgba(56,189,248,.25);border-radius:12px;padding:10px 14px;margin-bottom:16px}
+.rules b{color:var(--g3)}
+.tabs{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.tab{flex:1;min-width:190px;padding:13px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--txt);font-size:15.5px;font-weight:600;cursor:pointer;transition:border-color .25s,background .25s,transform .15s}
 .tab:hover{transform:translateY(-1px)}
 .tab.on{background:linear-gradient(120deg,rgba(34,197,94,.18),rgba(56,189,248,.14));border-color:rgba(52,211,153,.55)}
-.stage{position:relative;width:min(400px,92vw);margin:0 auto;aspect-ratio:7/9;border-radius:18px;overflow:hidden;background:#0a0f0d;border:1px solid var(--line)}
+.stage{position:relative;width:min(390px,92vw);margin:0 auto;aspect-ratio:7/9;border-radius:18px;overflow:hidden;background:#0a0f0d;border:1px solid var(--line)}
 .stage video,.stage img.up{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .stage video{transform:scaleX(-1)}
 .stage .guide{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .stage .msg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:22px;color:var(--dim);font-size:15px;background:rgba(5,8,10,.55)}
-.btn{display:inline-block;border:none;cursor:pointer;color:#04120a;font-weight:700;font-size:16px;padding:14px 26px;border-radius:14px;background:linear-gradient(92deg,var(--g1),var(--g2) 60%,var(--g3) 130%);transition:transform .15s,opacity .2s;box-shadow:0 8px 24px rgba(20,184,166,.25)}
+.btn{display:inline-block;border:none;cursor:pointer;color:#04120a;font-weight:700;font-size:16px;padding:14px 26px;border-radius:14px;background:linear-gradient(92deg,var(--g1),var(--g2) 60%,var(--g3) 130%);transition:transform .15s,opacity .2s;box-shadow:0 8px 24px rgba(20,184,166,.25);text-decoration:none}
 .btn:hover{transform:translateY(-1px)}
-.btn:active{transform:translateY(0)}
 .btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
 .btn.ghost{background:rgba(255,255,255,.06);color:var(--txt);border:1px solid var(--line);box-shadow:none}
 .rowbtn{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:16px}
-.drop{border:1.6px dashed rgba(125,211,252,.35);border-radius:16px;padding:30px 18px;text-align:center;color:var(--dim);cursor:pointer;transition:border-color .25s,background .25s}
+.drop{border:1.6px dashed rgba(125,211,252,.35);border-radius:16px;padding:28px 18px;text-align:center;color:var(--dim);cursor:pointer;transition:border-color .25s,background .25s}
 .drop:hover,.drop.over{border-color:var(--g2);background:rgba(20,184,166,.06)}
 .drop b{color:var(--txt)}
 .hidden{display:none!important}
-.checks{list-style:none;margin-top:6px}
+.verdict{margin-top:18px;padding:16px 18px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.03);font-size:15.5px}
+.verdict.good{border-color:rgba(52,211,153,.65);background:rgba(34,197,94,.09)}
+.verdict.bad{border-color:rgba(248,113,113,.55);background:rgba(248,113,113,.06)}
+.verdict .big{font-size:18px;font-weight:800;display:block;margin-bottom:2px}
+.verdict ul{margin:6px 0 0 18px;color:#ffd9d9}
+.checks{list-style:none;margin-top:14px}
 .checks li{display:flex;gap:12px;align-items:flex-start;padding:11px 12px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);margin-bottom:8px;transition:border-color .3s}
 .checks .ic{font-size:18px;line-height:1.3;min-width:24px;text-align:center}
 .checks .nm{font-weight:600;font-size:15px}
-.checks .dt{color:var(--dim);font-size:13px}
+.checks .dt{color:var(--dim);font-size:13.5px}
 .checks li.ok{border-color:rgba(52,211,153,.45)}
 .checks li.bad{border-color:rgba(248,113,113,.45)}
-.score{margin-top:14px;padding:16px;border-radius:14px;text-align:center;font-size:16px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
-.score b{font-size:20px}
-.score.good{border-color:rgba(52,211,153,.6);background:rgba(34,197,94,.08)}
-.score.mid{border-color:rgba(251,191,36,.55);background:rgba(251,191,36,.06)}
 .resultbox{text-align:center}
-.resultbox canvas{width:min(280px,80vw);aspect-ratio:7/9;border-radius:14px;border:1px solid var(--line);background:#0a0f0d}
-.examples{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.resultbox canvas{width:min(270px,80vw);aspect-ratio:7/9;border-radius:14px;border:1px solid var(--line);background:#0a0f0d}
+.examples{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:16px}
 .ex{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:rgba(255,255,255,.03)}
 .ex img{width:100%;aspect-ratio:3/3.4;object-fit:cover;display:block}
 .ex .cap{padding:12px 14px;font-size:14px}
 .tag{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12.5px;font-weight:700;margin-bottom:6px}
 .tag.ok{background:rgba(34,197,94,.16);color:var(--ok);border:1px solid rgba(52,211,153,.4)}
 .tag.no{background:rgba(248,113,113,.13);color:var(--bad);border:1px solid rgba(248,113,113,.4)}
-.mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-.mini .m{padding:16px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);font-size:14.5px}
-.mini .m b{display:block;margin-bottom:4px;font-size:15px}
-.faq{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.faq{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:14px}
 .faq .q{padding:15px 16px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);font-size:14.5px}
 .faq .q b{display:block;margin-bottom:3px}
-footer{margin-top:34px;text-align:center;color:var(--dim);font-size:13.5px}
+.matchscore{text-align:center;padding:10px 0 2px}
+.matchscore .pct{font-size:52px;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+footer{margin-top:32px;text-align:center;color:var(--dim);font-size:13.5px}
 .note{font-size:12.5px;color:var(--dim);text-align:center;margin-top:10px}
 .statusline{text-align:center;color:var(--dim);font-size:14px;min-height:22px;margin-top:10px}
-@media (max-width:560px){.card{padding:16px}.checks .dt{font-size:12.5px}}
+@media (max-width:560px){.card{padding:16px}}
 </style>
 </head>
 <body>
-<div class="aurora"></div><div class="grid"></div>
+<div class="aurora"></div><div class="gridbg"></div>
 <div class="wrap">
 
 <header>
-  <span class="eyebrow">NEET · JEE · NTA EXAMS KE LIYE &nbsp;•&nbsp; <b>India Ka Free Live Photo Tool</b></span>
+  <span class="eyebrow">NEET · JEE · NTA EXAMS &nbsp;•&nbsp; <b>India Ka Free Live Photo Tool</b></span>
   <h1>Live Photo, <span class="grad">Pehli Baar Me Sahi</span></h1>
-  <p class="sub">Form bharte waqt jo live photo Aadhaar se match hoti hai, usi ki <b style="color:var(--txt)">ghar baithe practice</b> karo — chehra, roshni, background, sab pehle hi check kar lo.</p>
+  <p class="sub">Form ki live photo me jo galtiyan students karte hain, <b style="color:var(--txt)">wo saari yahan pehle pakdo</b> — aur sahi ho to wo bhi saaf suno.</p>
   <div class="chips">
     <span class="chip">✅ <b>Bilkul Free</b> — Koi Limit Nahi</span>
     <span class="chip">🔒 Photo <b>Phone Se Bahar Nahi</b> Jata</span>
-    <span class="chip">⚡ <b>Seconds Me</b> Poori Jaanch</span>
+    <span class="chip">🔍 <b>15 Cheezon</b> Ki Jaanch</span>
   </div>
 </header>
 
 <section class="card" id="tool">
-  <h2>📸 Live Photo Practice</h2>
-  <p class="hint">Bilkul asal form jaisa mahol — neeche wale ghare (oval) me chehra rakho, har cheez khud-ba-khud check hoti rahegi.</p>
+  <h2>📸 Live Photo Ki Poori Jaanch</h2>
+  <p class="hint">Camera ke saamne baitho ya apni photo dalo — har galti neeche naam ke saath milegi, aur galti na ho to "sab sahi" bhi saaf likha aayega.</p>
+  <div class="rules"><b>Asal form ke niyam:</b> halka-saada background · chehra bada aur beech me · dono kaan dikhe · munh band, chehra normal · seedha camera me dekho · koi cap/topi nahi · photo recent aur bina edit ki</div>
 
   <div class="tabs">
     <button class="tab on" id="tabCam">📷 Camera Se Practice</button>
     <button class="tab" id="tabUp">🖼️ Photo Upload Karke Check</button>
   </div>
 
-  <!-- CAMERA PANE -->
   <div id="paneCam">
     <div class="stage">
       <video id="cam" playsinline muted></video>
@@ -137,12 +137,11 @@ footer{margin-top:34px;text-align:center;color:var(--dim);font-size:13.5px}
     </div>
   </div>
 
-  <!-- UPLOAD PANE -->
   <div id="paneUp" class="hidden">
     <div class="drop" id="drop">
       <p style="font-size:30px">🖼️</p>
       <p><b>Photo yahan dalo</b> ya click karke chuno</p>
-      <p style="font-size:13px">Jo photo form me lagani hai, wahi dalo — hum bata denge kahan kami hai</p>
+      <p style="font-size:13px">Photo ki date aur edit ki jaanch bhi hogi — isiliye WhatsApp wali nahi, asal camera wali photo dalo</p>
     </div>
     <input type="file" id="fileIn" accept="image/*" class="hidden">
     <div class="stage hidden" id="upStage" style="margin-top:16px">
@@ -151,12 +150,9 @@ footer{margin-top:34px;text-align:center;color:var(--dim);font-size:13.5px}
     <p class="statusline" id="upStatus"></p>
   </div>
 
-  <!-- CHECKS -->
-  <h3 style="margin:22px 0 10px;font-size:17px">🔍 Tumhari Photo Ki Jaanch</h3>
+  <div class="verdict" id="verdictBox"><span class="big">👀 Photo ka intezaar hai</span>Photo aate hi yahan seedha jawab milega — kya sahi hai, kya galat.</div>
   <ul class="checks" id="checks"></ul>
-  <div class="score" id="scoreBox">Photo aate hi yahan result dikhega — kitni cheezein sahi hain, kitni sudharni hain.</div>
 
-  <!-- RESULT -->
   <div class="resultbox hidden" id="resultBox" style="margin-top:20px">
     <h3 style="margin-bottom:10px">🎉 Tumhari Taiyaar Photo</h3>
     <canvas id="finalCanvas" width="350" height="450"></canvas>
@@ -164,7 +160,24 @@ footer{margin-top:34px;text-align:center;color:var(--dim);font-size:13.5px}
     <div class="rowbtn">
       <a class="btn" id="btnDownload" download="live-photo-taiyaar.jpg">⬇️ Photo Download Karo</a>
     </div>
-    <p class="note">Ye photo practice ke liye hai — asal form me live photo portal khud kheechega.<br>Is photo se tum samjhoge ki camera ke saamne kaise baithna hai.</p>
+    <p class="note">Ye photo practice ke liye hai — asal form me live photo portal khud kheechega.</p>
+  </div>
+</section>
+
+<section class="card" id="matchCard">
+  <h2>🪪 Aadhaar Photo Se Milaao</h2>
+  <p class="hint">Pehle upar apni photo check kar lo, phir yahan apne <b>Aadhaar card ki photo</b> (card par chhapi chehre wali photo, paas se crop karke) dalo. Hum dono chehron ke naap mila kar ek <b>andaza</b> denge.</p>
+  <div class="drop" id="dropA">
+    <p style="font-size:28px">🪪</p>
+    <p><b>Aadhaar wali photo yahan dalo</b> ya click karke chuno</p>
+    <p style="font-size:13px">Sirf chehre wala hissa crop karke dalo to andaza behtar aayega</p>
+  </div>
+  <input type="file" id="fileInA" accept="image/*" class="hidden">
+  <p class="statusline" id="matchStatus"></p>
+  <div class="matchscore hidden" id="matchResult">
+    <div class="pct" id="matchPct">—</div>
+    <p id="matchText" style="font-size:16px"></p>
+    <p class="note">⚠️ Ye sirf ek andaza hai — chehre ke naap par bana hua. <b>Asal match UIDAI/NTA apne system se karta hai</b>, uska result koi tool pehle nahi bata sakta. Andaza kam aaye to ghabrana mat — live photo saaf aur saamne se ho, yahi sabse bada ilaaj hai; phir bhi atak jaye to Aadhaar me photo update karana pakka raasta hai.</p>
   </div>
 </section>
 
@@ -188,22 +201,12 @@ footer{margin-top:34px;text-align:center;color:var(--dim);font-size:13.5px}
 </section>
 
 <section class="card">
-  <h2>⚠️ Form Me Hota Kya Hai?</h2>
-  <p class="hint">Isiliye hazaron students is screen par atak jate hain.</p>
-  <div class="mini">
-    <div class="m"><b>1️⃣ Live Photo = Aadhaar Se Match</b>Form bharte waqt camera khulta hai, aur tumhari live photo Aadhaar card wali photo se milayi jati hai.</div>
-    <div class="m"><b>2️⃣ Purani Photo, Sabse Badi Musibat</b>Aadhaar me aksar bachpan ki photo hoti hai. Chehra badal gaya ho to match fail — aur form aage hi nahi badhta.</div>
-    <div class="m"><b>3️⃣ Practice = Pehle Se Taiyaari</b>Jo galtiyan form par hoti hain — andhera, chhota chehra, tedha sir — wahi sab yahan pehle pakad lo.</div>
-  </div>
-</section>
-
-<section class="card">
   <h2>❓ Aam Sawaal</h2>
   <div class="faq">
     <div class="q"><b>Kya ye NTA ka official tool hai?</b>Nahi. Ye ek free practice tool hai — asal match form portal par hi hota hai.</div>
+    <div class="q"><b>Kya ye bata sakta hai photo pass hogi ya nahi?</b>Pakka koi nahi bata sakta — wo UIDAI ke system ke andar hota hai. Ye tool galtiyan pehle pakadta hai aur Aadhaar se milan ka andaza deta hai.</div>
     <div class="q"><b>Kya meri photo kahin upload hoti hai?</b>Nahi. Saari jaanch tumhare phone/browser ke andar hoti hai, photo kahin nahi jati.</div>
     <div class="q"><b>Aadhaar photo bahut purani ho to?</b>Live photo jitni saaf aur saamne se hogi, chance utna behtar. Pakki musibat ho to Aadhaar me photo update karana sabse pakka raasta hai.</div>
-    <div class="q"><b>Kya yahan sab ✅ aane se pass pakka hai?</b>Nahi — guarantee koi nahi de sakta. Lekin jo galtiyan reject karwati hain, wo yahan pehle hi sudhar jayengi.</div>
   </div>
 </section>
 
@@ -239,9 +242,12 @@ function blurVariance(d,w,h,box){
 }
 function analyzeCrop(d,w,h,face){
   var whole=regionStats(d,w,h,0,0,w,h);
-  var faceStats=null, bgStats=null;
   if(face){
-    faceStats=regionStats(d,w,h,face.x,face.y,face.x+face.w,face.y+face.h);
+    var fs=regionStats(d,w,h,face.x,face.y,face.x+face.w,face.y+face.h);
+    var midX=face.x+face.w/2;
+    var leftH=regionStats(d,w,h,face.x,face.y,midX,face.y+face.h);
+    var rightH=regionStats(d,w,h,midX,face.y,face.x+face.w,face.y+face.h);
+    var hi=Math.max(leftH.mean,rightH.mean), lo=Math.max(20,Math.min(leftH.mean,rightH.mean));
     var ex=face.w*0.28, ey=face.h*0.22;
     var bx0=face.x-ex, by0=face.y-ey, bx1=face.x+face.w+ex, by1=face.y+face.h+ey;
     var parts=[];
@@ -251,12 +257,11 @@ function analyzeCrop(d,w,h,face){
     parts.push(regionStats(d,w,h,Math.min(w,bx1),Math.max(0,by0),w,Math.min(h,by1)));
     var s=0,s2=0,n=0;
     parts.forEach(function(p){ if(p.n>0){ s+=p.mean*p.n; s2+=(p.std*p.std+p.mean*p.mean)*p.n; n+=p.n; } });
-    if(n>0){ var m=s/n; bgStats={mean:m, std:Math.sqrt(Math.max(0,s2/n-m*m)), n:n}; }
-    var blurBox={x:face.x+face.w*0.15, y:face.y+face.h*0.15, w:face.w*0.7, h:face.h*0.7};
-    var blur=blurVariance(d,w,h,blurBox);
-    return {faceMean:faceStats?faceStats.mean:whole.mean, bg:bgStats, whole:whole, blur:blur};
+    var bg=null; if(n>0){ var m=s/n; bg={mean:m, std:Math.sqrt(Math.max(0,s2/n-m*m)), n:n}; }
+    var blur=blurVariance(d,w,h,{x:face.x+face.w*0.15,y:face.y+face.h*0.15,w:face.w*0.7,h:face.h*0.7});
+    return {faceMean:fs.mean, shadowRatio:hi/lo, bg:bg, whole:whole, blur:blur};
   }
-  return {faceMean:whole.mean, bg:null, whole:whole, blur:blurVariance(d,w,h,{x:w*0.2,y:h*0.15,w:w*0.6,h:h*0.6})};
+  return {faceMean:whole.mean, shadowRatio:null, bg:null, whole:whole, blur:blurVariance(d,w,h,{x:w*0.2,y:h*0.15,w:w*0.6,h:h*0.6})};
 }
 function computeCrop(vw,vh,face){
   var ratio=7/9, cw, ch;
@@ -273,42 +278,146 @@ function computeCrop(vw,vh,face){
   if(cw>vw){ cw=vw; ch=cw/ratio; }
   return {x:(vw-cw)/2, y:(vh-ch)/2, w:cw, h:ch};
 }
+function exifParse(buf){
+  var out={date:null,software:null,make:null,model:null};
+  try{
+    var v=new DataView(buf);
+    if(buf.byteLength<4||v.getUint16(0)!==0xFFD8) return out;
+    var off=2;
+    while(off+4<=buf.byteLength){
+      var marker=v.getUint16(off);
+      if((marker&0xFF00)!==0xFF00) break;
+      if(marker===0xFFDA) break;
+      var len=v.getUint16(off+2);
+      if(marker===0xFFE1&&off+10<=buf.byteLength&&v.getUint32(off+4)===0x45786966){
+        parseTiff(v,off+10,out);
+      }
+      if(len<2) break;
+      off+=2+len;
+    }
+  }catch(e){}
+  return out;
+}
+function parseTiff(v,t0,out){
+  var little=v.getUint16(t0)===0x4949;
+  function u16(o){ return v.getUint16(o,little); }
+  function u32(o){ return v.getUint32(o,little); }
+  if(u16(t0+2)!==42) return;
+  function readStr(valOff,count){
+    var bytes=[]; var base=count<=4?valOff:t0+u32(valOff);
+    for(var i=0;i<count;i++){ var c=v.getUint8(base+i); if(c===0) break; bytes.push(c); }
+    return String.fromCharCode.apply(null,bytes);
+  }
+  function scanIFD(ifdOff,want){
+    var n=u16(t0+ifdOff); var found={};
+    for(var i=0;i<n;i++){
+      var e=t0+ifdOff+2+i*12; var tag=u16(e);
+      if(want.indexOf(tag)>=0){
+        var type=u16(e+2), count=u32(e+4);
+        if(type===2) found[tag]=readStr(e+8,count);
+        else if(tag===0x8769) found[tag]=u32(e+8);
+      }
+    }
+    return found;
+  }
+  var ifd0=scanIFD(u32(t0+4),[0x010F,0x0110,0x0131,0x0132,0x8769]);
+  if(ifd0[0x010F]) out.make=ifd0[0x010F];
+  if(ifd0[0x0110]) out.model=ifd0[0x0110];
+  if(ifd0[0x0131]) out.software=ifd0[0x0131];
+  var dt=ifd0[0x0132]||null;
+  if(ifd0[0x8769]){
+    var ex=scanIFD(ifd0[0x8769],[0x9003,0x9004]);
+    if(ex[0x9003]) dt=ex[0x9003]; else if(ex[0x9004]) dt=ex[0x9004];
+  }
+  if(dt&&dt.length>=10) out.date=dt.substring(0,10).replace(/:/g,'-');
+}
+function pdist(a,b){ var dx=a.x-b.x, dy=a.y-b.y; return Math.sqrt(dx*dx+dy*dy); }
+function pmid(a,b){ return {x:(a.x+b.x)/2, y:(a.y+b.y)/2}; }
+function geoFeatures(lm){
+  if(!lm||lm.length<360) return null;
+  var eyeMid=pmid(lm[33],lm[263]);
+  var mouthMid=pmid(lm[61],lm[291]);
+  var faceW=pdist(lm[127],lm[356]), faceH=pdist(lm[10],lm[152]);
+  if(faceW<0.01||faceH<0.01) return null;
+  return [
+    pdist(lm[33],lm[263])/faceW,
+    pdist(eyeMid,lm[1])/faceH,
+    pdist(lm[1],mouthMid)/faceH,
+    pdist(lm[61],lm[291])/faceW,
+    pdist(eyeMid,lm[152])/faceH,
+    faceH/faceW
+  ];
+}
+function compareFaces(fa,fb){
+  if(!fa||!fb) return null;
+  var sum=0;
+  for(var i=0;i<fa.length;i++){ var avg=(fa[i]+fb[i])/2; sum+=Math.abs(fa[i]-fb[i])/Math.max(0.05,avg); }
+  var meanRel=sum/fa.length;
+  var score=Math.round(Math.max(2,Math.min(96,100-meanRel*165)));
+  var band = score>=75 ? 'kaafi' : (score>=55 ? 'thoda' : 'bahut');
+  return {score:score, band:band};
+}
+var EDIT_SOFT=/photoshop|picsart|snapseed|lightroom|canva|facetune|beauty|retrica|vsco|meitu|pics art/i;
 function buildChecks(inp){
   var C=[];
-  function push(id,ok,detail){ C.push({id:id,ok:ok,detail:detail}); }
+  function push(id,ok,short,detail){ C.push({id:id,ok:ok,short:short,detail:detail}); }
   if(!inp.faceFound){
-    push('chehra',false,'Chehra nahi mila — camera ki taraf dekho, chehra ghare ke andar rakho.');
-    push('size',null,'Chehra milne par ye check hoga.');
-    push('seedha',null,'Chehra milne par ye check hoga.');
-    push('aankhen',null,'Chehra milne par ye check hoga.');
-    push('kaan',null,'Chehra milne par ye check hoga.');
+    push('chehra',false,'Chehra nahi mila','Chehra nahi mila — camera ki taraf dekho, chehra ghare ke andar rakho.');
+    ['size','ekchehra','beech','seedha','nazar','aankhen','munh','kaan'].forEach(function(id){
+      push(id,null,'','Chehra milne par ye check hoga.');
+    });
   } else {
-    push('chehra',true,'Chehra saaf pehchana gaya.');
+    push('chehra',true,'','Chehra saaf pehchana gaya.');
+    if(inp.multiFace) push('ekchehra',false,'Peeche dusra chehra hai','Frame me ek aur chehra dikh raha hai — akele baitho, peeche koi na ho.');
+    else push('ekchehra',true,'','Sirf tumhara chehra hai, koi aur nahi.');
     var f=inp.faceFracH;
-    if(f<0.45) push('size',false,'Chehra chhota hai ('+Math.round(f*100)+'%) — thoda camera ke paas aao. Sahi: 50–75%.');
-    else if(f>0.80) push('size',false,'Chehra bahut bada hai ('+Math.round(f*100)+'%) — thoda peeche ho jao. Sahi: 50–75%.');
-    else push('size',true,'Chehra sahi size me hai ('+Math.round(f*100)+'% of photo).');
+    if(f<0.45) push('size',false,'Chehra chhota hai','Chehra chhota hai ('+Math.round(f*100)+'%) — thoda camera ke paas aao. Sahi: 50–75%.');
+    else if(f>0.80) push('size',false,'Chehra bahut bada hai','Chehra bahut bada hai ('+Math.round(f*100)+'%) — thoda peeche ho jao. Sahi: 50–75%.');
+    else push('size',true,'','Chehra sahi size me hai ('+Math.round(f*100)+'% of photo).');
+    if(Math.abs(inp.centerDx)<=0.10&&Math.abs(inp.centerDy)<=0.11) push('beech',true,'','Chehra photo ke beech me hai.');
+    else push('beech',false,'Chehra beech me nahi hai','Chehra side/upar-neeche hata hua hai — ghare ke bilkul beech me rakho.');
     var rollOk=Math.abs(inp.rollDeg)<=6, yawOk=Math.abs(inp.yaw)<=0.18;
-    if(rollOk&&yawOk) push('seedha',true,'Sir bilkul seedha hai.');
-    else if(!rollOk) push('seedha',false,'Sir jhuka hua hai ('+Math.round(Math.abs(inp.rollDeg))+'°) — sir seedha karo.');
-    else push('seedha',false,'Chehra side ki taraf ghuma hai — seedha camera me dekho.');
-    if(inp.blinkL==null||inp.blinkR==null) push('aankhen',null,'Ye jaanch is device par nahi ho payi.');
-    else if(inp.blinkL<0.35&&inp.blinkR<0.35) push('aankhen',true,'Dono aankhen khuli hain.');
-    else push('aankhen',false,'Aankhen band ya aadhi band lag rahi hain — kholo aur camera me dekho.');
-    if(inp.earsOk==null) push('kaan',null,'Ye jaanch is device par nahi ho payi.');
-    else if(inp.earsOk) push('kaan',true,'Dono kaan frame ke andar hain.');
-    else push('kaan',false,'Ek ya dono kaan frame se bahar hain — thoda peeche ho ya chehra beech me rakho.');
+    if(rollOk&&yawOk) push('seedha',true,'','Sir bilkul seedha hai.');
+    else if(!rollOk) push('seedha',false,'Sir jhuka hua hai','Sir jhuka hua hai ('+Math.round(Math.abs(inp.rollDeg))+'°) — sir seedha karo.');
+    else push('seedha',false,'Chehra side ghuma hai','Chehra side ki taraf ghuma hai — seedha camera me dekho.');
+    if(inp.gaze==null) push('nazar',null,'','Ye jaanch is device par nahi ho payi.');
+    else if(inp.gaze>0.55) push('nazar',false,'Camera me nahi dekh rahe','Nazar idhar-udhar hai — seedha camera ke lens me dekho.');
+    else push('nazar',true,'','Nazar seedha camera par hai.');
+    if(inp.blinkL==null||inp.blinkR==null) push('aankhen',null,'','Ye jaanch is device par nahi ho payi.');
+    else if(inp.blinkL<0.35&&inp.blinkR<0.35) push('aankhen',true,'','Dono aankhen khuli hain.');
+    else push('aankhen',false,'Aankhen band hain','Aankhen band ya aadhi band lag rahi hain — kholo aur camera me dekho.');
+    if(inp.smile==null&&inp.jawOpen==null) push('munh',null,'','Ye jaanch is device par nahi ho payi.');
+    else if(inp.jawOpen!=null&&inp.jawOpen>0.30) push('munh',false,'Munh khula hai','Munh khula hua hai — munh band karo, chehra bilkul normal rakho.');
+    else if(inp.smile!=null&&inp.smile>0.5) push('munh',false,'Smile kar rahe ho','Smile dikhai de rahi hai — form ki photo me chehra normal, bina smile ke rakho.');
+    else push('munh',true,'','Munh band hai, chehra normal hai.');
+    if(inp.earsOk==null) push('kaan',null,'','Ye jaanch is device par nahi ho payi.');
+    else if(inp.earsOk) push('kaan',true,'','Dono kaan frame ke andar hain.');
+    else push('kaan',false,'Kaan frame se bahar hai','Ek ya dono kaan frame se bahar hain — thoda peeche ho ya chehra beech me rakho.');
   }
   var fm=inp.faceMean;
-  if(fm<90) push('roshni',false,'Chehre par andhera hai (roshni '+Math.round(fm)+') — khidki ya light ki taraf munh karo.');
-  else if(fm>228) push('roshni',false,'Chehre par bahut tez roshni hai — thoda side ho jao.');
-  else push('roshni',true,'Chehre par roshni sahi hai.');
-  if(!inp.bg) push('background',null,'Chehra milne par background check hoga.');
-  else if(inp.bg.mean<150) push('background',false,'Background gahra/andhera hai — halki, saadi deewar ke saamne khade ho.');
-  else if(inp.bg.std>46) push('background',false,'Background saada nahi hai — peeche ki cheezein hata kar saadi deewar rakho.');
-  else push('background',true,'Background halka aur saada hai.');
-  if(inp.blur<55) push('sharp',false,'Photo dhundhli lag rahi hai — camera saaf karo, haath sthir rakho.');
-  else push('sharp',true,'Photo saaf aur sharp hai.');
+  if(fm<90) push('roshni',false,'Chehre par andhera hai','Chehre par andhera hai (roshni '+Math.round(fm)+') — khidki ya light ki taraf munh karo.');
+  else if(fm>228) push('roshni',false,'Bahut tez roshni hai','Chehre par bahut tez roshni hai — thoda side ho jao.');
+  else push('roshni',true,'','Chehre par roshni sahi hai.');
+  if(inp.shadowRatio==null) push('saaya',null,'','Chehra milne par ye check hoga.');
+  else if(inp.shadowRatio>1.45) push('saaya',false,'Chehre par saaya hai','Chehre ke ek taraf saaya pad raha hai — aisi jagah baitho jahan roshni dono taraf barabar aaye.');
+  else push('saaya',true,'','Chehre par saaya nahi hai, roshni barabar hai.');
+  if(!inp.bg) push('background',null,'','Chehra milne par background check hoga.');
+  else if(inp.bg.mean<150) push('background',false,'Background gahra hai','Background gahra/andhera hai — halki, saadi deewar ke saamne khade ho.');
+  else if(inp.bg.std>46) push('background',false,'Background saada nahi','Background saada nahi hai — peeche ki cheezein hata kar saadi deewar rakho.');
+  else push('background',true,'','Background halka aur saada hai.');
+  if(inp.blur<55) push('sharp',false,'Photo dhundhli hai','Photo dhundhli lag rahi hai — camera saaf karo, haath sthir rakho.');
+  else push('sharp',true,'','Photo saaf aur sharp hai.');
+  if(inp.exif===undefined){
+    push('date',null,'','Ye jaanch sirf upload wali photo me hoti hai.');
+    push('edit',null,'','Ye jaanch sirf upload wali photo me hoti hai.');
+  } else {
+    if(!inp.exif.date) push('date',null,'','Photo ki date nahi mil payi — WhatsApp se aayi photo me date mit jati hai. Asal camera se khichi photo dalo.');
+    else if(inp.exif.date<'2026-01-01') push('date',false,'Photo purani hai','Ye photo '+inp.exif.date+' ki hai — form ke niyam se photo 1 Jan 2026 ke baad ki honi chahiye. Nayi photo kheecho.');
+    else push('date',true,'','Photo ki date theek hai ('+inp.exif.date+').');
+    if(inp.exif.software&&EDIT_SOFT.test(inp.exif.software)) push('edit',false,'Photo edit ki hui hai','Is photo me edit wale software ke nishan mile ('+inp.exif.software+') — edit ki hui photo form me reject hoti hai. Bina edit wali asal photo use karo.');
+    else if(!inp.exif.software) push('edit',null,'','Edit ka koi saboot nahi mila — lekin dhyaan rahe, edit hone par bhi aksar ye nishan mit jata hai.');
+    else push('edit',true,'','Edit wale software ke nishan nahi mile.');
+  }
   return C;
 }
 /*CORE-END*/
@@ -317,13 +426,20 @@ function buildChecks(inp){
 <script>
 var CHECK_DEFS=[
  {id:'chehra',nm:'Chehra saaf dikh raha hai'},
+ {id:'ekchehra',nm:'Sirf tum akeli/akeli photo me ho'},
  {id:'size',nm:'Chehra sahi size me hai'},
+ {id:'beech',nm:'Chehra photo ke beech me hai'},
  {id:'seedha',nm:'Sir seedha hai'},
+ {id:'nazar',nm:'Nazar seedha camera par hai'},
  {id:'aankhen',nm:'Aankhen khuli hain'},
+ {id:'munh',nm:'Munh band, chehra normal hai'},
  {id:'kaan',nm:'Dono kaan dikh rahe hain'},
  {id:'roshni',nm:'Chehre par roshni sahi hai'},
+ {id:'saaya',nm:'Chehre par saaya nahi hai'},
  {id:'background',nm:'Background halka aur saada hai'},
- {id:'sharp',nm:'Photo dhundhli nahi hai'}
+ {id:'sharp',nm:'Photo dhundhli nahi hai'},
+ {id:'date',nm:'Photo recent hai (date)'},
+ {id:'edit',nm:'Photo edit ki hui nahi hai'}
 ];
 var $=function(id){return document.getElementById(id)};
 var checksEl=$('checks'), rowEls={};
@@ -333,82 +449,114 @@ CHECK_DEFS.forEach(function(d){
   checksEl.appendChild(li); rowEls[d.id]=li;
 });
 function setChecks(list){
-  var okCount=0, totCount=0;
+  var fails=[], decided=0;
   list.forEach(function(c){
     var li=rowEls[c.id]; if(!li) return;
     var ic=li.querySelector('.ic'), dt=li.querySelector('.dt');
     li.classList.remove('ok','bad');
-    if(c.ok===true){ ic.textContent='✅'; li.classList.add('ok'); okCount++; totCount++; }
-    else if(c.ok===false){ ic.textContent='❌'; li.classList.add('bad'); totCount++; }
+    if(c.ok===true){ ic.textContent='✅'; li.classList.add('ok'); decided++; }
+    else if(c.ok===false){ ic.textContent='❌'; li.classList.add('bad'); decided++; fails.push(c); }
     else { ic.textContent='➖'; }
     dt.textContent=c.detail;
   });
-  var sb=$('scoreBox'); sb.classList.remove('good','mid');
-  if(totCount===0){ sb.innerHTML='Jaanch abhi adhuri hai — photo saaf aane do.'; return okCount; }
-  if(okCount===totCount){ sb.classList.add('good'); sb.innerHTML='<b>🎉 Sab '+totCount+' cheezein sahi hain!</b><br>Bas aisi hi photo form me chahiye — ab confidence ke saath form bharo.'; }
-  else if(okCount>=totCount-2){ sb.classList.add('mid'); sb.innerHTML='<b>'+okCount+' / '+totCount+' sahi</b> — bas neeche ❌ wali cheezein sudhar lo, phir taiyaar!'; }
-  else { sb.innerHTML='<b>'+okCount+' / '+totCount+' sahi</b> — ❌ wali cheezein ek-ek karke sudharo, jaanch khud hoti rahegi.'; }
-  return okCount;
+  var vb=$('verdictBox'); vb.classList.remove('good','bad');
+  if(fails.length===0&&decided>0){
+    vb.classList.add('good');
+    vb.innerHTML='<span class="big">✅ Sab sahi hai — koi galti nahi mili!</span>Jo '+decided+' cheezein check ho payin, sab theek hain. Bas aisi hi photo form me chahiye — confidence ke saath aage badho.';
+  } else if(fails.length>0){
+    vb.classList.add('bad');
+    var items=fails.map(function(c){ return '<li>'+c.short+'</li>'; }).join('');
+    vb.innerHTML='<span class="big">❌ '+fails.length+' galti'+(fails.length>1?'yan':'')+' mili '+(fails.length>1?'hain':'hai')+':</span><ul>'+items+'</ul>Neeche har galti ke saath uska ilaaj bhi likha hai — ek-ek sudharo, jaanch khud hoti rahegi.';
+  } else {
+    vb.innerHTML='<span class="big">👀 Jaanch chal rahi hai…</span>Photo saaf aane do.';
+  }
+  return fails.length;
 }
 
-/* ---------- MediaPipe FaceLandmarker (lazy load) ---------- */
-var mpVision=null, lmVideo=null, lmImage=null, mpFailed=false;
+/* ---------- MediaPipe (GPU fail ho to CPU) ---------- */
+var mpVision=null, lmVideo=null, lmImage=null;
 async function loadMP(){
   if(mpVision) return mpVision;
-  mpVision = await import('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/vision_bundle.mjs');
+  mpVision=await import('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/vision_bundle.mjs');
   return mpVision;
+}
+async function makeLM(mode){
+  var v=await loadMP();
+  var fileset=await v.FilesetResolver.forVisionTasks('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/wasm');
+  var delegates=['GPU','CPU'];
+  for(var i=0;i<delegates.length;i++){
+    try{
+      return await v.FaceLandmarker.createFromOptions(fileset,{
+        baseOptions:{modelAssetPath:'https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task', delegate:delegates[i]},
+        runningMode:mode, numFaces:2, outputFaceBlendshapes:true
+      });
+    }catch(e){ if(i===delegates.length-1) throw e; }
+  }
 }
 async function getLandmarker(mode){
   try{
-    var v=await loadMP();
-    if(mode==='VIDEO'&&lmVideo) return lmVideo;
-    if(mode==='IMAGE'&&lmImage) return lmImage;
-    var fileset=await v.FilesetResolver.forVisionTasks('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/wasm');
-    var lm=await v.FaceLandmarker.createFromOptions(fileset,{
-      baseOptions:{modelAssetPath:'https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task', delegate:'GPU'},
-      runningMode:mode, numFaces:1, outputFaceBlendshapes:true
-    });
-    if(mode==='VIDEO') lmVideo=lm; else lmImage=lm;
-    return lm;
-  }catch(e){ mpFailed=true; return null; }
+    if(mode==='VIDEO'){ if(!lmVideo) lmVideo=await makeLM('VIDEO'); return lmVideo; }
+    if(!lmImage) lmImage=await makeLM('IMAGE'); return lmImage;
+  }catch(e){ return null; }
+}
+function bsMap(res,idx){
+  var m={};
+  if(res.faceBlendshapes&&res.faceBlendshapes[idx]){
+    res.faceBlendshapes[idx].categories.forEach(function(c){ m[c.categoryName]=c.score; });
+  }
+  return m;
 }
 function extractFace(res,w,h){
   if(!res||!res.faceLandmarks||!res.faceLandmarks.length) return {found:false};
-  var lm=res.faceLandmarks[0];
+  var best=0, bestArea=-1;
+  res.faceLandmarks.forEach(function(lm,i){
+    var mnx=1e9,mny=1e9,mxx=-1,mxy=-1;
+    lm.forEach(function(p){ if(p.x<mnx)mnx=p.x; if(p.y<mny)mny=p.y; if(p.x>mxx)mxx=p.x; if(p.y>mxy)mxy=p.y; });
+    var a=(mxx-mnx)*(mxy-mny); if(a>bestArea){ bestArea=a; best=i; }
+  });
+  var lm=res.faceLandmarks[best];
   var minX=1e9,minY=1e9,maxX=-1,maxY=-1;
   lm.forEach(function(p){ if(p.x<minX)minX=p.x; if(p.y<minY)minY=p.y; if(p.x>maxX)maxX=p.x; if(p.y>maxY)maxY=p.y; });
   var box={x:minX*w, y:minY*h, w:(maxX-minX)*w, h:(maxY-minY)*h};
   var pR=lm[33], pL=lm[263], nose=lm[1];
   var roll=Math.atan2((pL.y-pR.y)*h,(pL.x-pR.x)*w)*180/Math.PI;
-  var eyeMidX=(pR.x+pL.x)/2;
-  var yaw=(nose.x-eyeMidX)/Math.max(0.01,(maxX-minX));
+  var yaw=(nose.x-(pR.x+pL.x)/2)/Math.max(0.01,(maxX-minX));
   var earR=lm[234], earL=lm[454];
-  var earsOk = earR.x>0.012&&earR.x<0.988&&earL.x>0.012&&earL.x<0.988&&earR.y>0.02&&earR.y<0.98&&earL.y>0.02&&earL.y<0.98;
-  var blinkL=null, blinkR=null;
-  if(res.faceBlendshapes&&res.faceBlendshapes.length){
-    res.faceBlendshapes[0].categories.forEach(function(c){
-      if(c.categoryName==='eyeBlinkLeft') blinkL=c.score;
-      if(c.categoryName==='eyeBlinkRight') blinkR=c.score;
-    });
+  var earsOk=earR.x>0.012&&earR.x<0.988&&earL.x>0.012&&earL.x<0.988&&earR.y>0.02&&earR.y<0.98&&earL.y>0.02&&earL.y<0.98;
+  var bs=bsMap(res,best);
+  function g(k){ return (k in bs)?bs[k]:null; }
+  var blinkL=g('eyeBlinkLeft'), blinkR=g('eyeBlinkRight');
+  var smileL=g('mouthSmileLeft'), smileR=g('mouthSmileRight');
+  var smile=(smileL!=null&&smileR!=null)?(smileL+smileR)/2:null;
+  var jawOpen=g('jawOpen');
+  var gaze=null;
+  var upL=g('eyeLookUpLeft'), dnL=g('eyeLookDownLeft'), inL=g('eyeLookInLeft'), outL=g('eyeLookOutLeft');
+  var upR=g('eyeLookUpRight'), dnR=g('eyeLookDownRight'), inR=g('eyeLookInRight'), outR=g('eyeLookOutRight');
+  if(upL!=null&&upR!=null){
+    var devL=Math.max(upL||0,dnL||0)+Math.abs((inL||0)-(outL||0));
+    var devR=Math.max(upR||0,dnR||0)+Math.abs((inR||0)-(outR||0));
+    gaze=Math.max(devL,devR);
   }
-  return {found:true, box:box, rollDeg:roll, yaw:yaw, blinkL:blinkL, blinkR:blinkR, earsOk:earsOk};
+  return {found:true, multi:res.faceLandmarks.length>1, box:box, rollDeg:roll, yaw:yaw,
+    blinkL:blinkL, blinkR:blinkR, smile:smile, jawOpen:jawOpen, gaze:gaze, earsOk:earsOk,
+    features:geoFeatures(lm)};
 }
 
-/* ---------- Analysis pipeline ---------- */
+/* ---------- Analysis ---------- */
 var work=document.createElement('canvas'); work.width=350; work.height=450;
-var lastRender=null;
+var lastRender=null, lastFeatures=null;
 function drawCrop(ctx,src,crop,outW,outH,mirror){
   ctx.save();
   if(mirror){ ctx.translate(outW,0); ctx.scale(-1,1); }
   ctx.drawImage(src,crop.x,crop.y,crop.w,crop.h,0,0,outW,outH);
   ctx.restore();
 }
-async function runAnalysis(src,sw,sh,mirror,mode){
+async function runAnalysis(src,sw,sh,mirror,mode,exif){
   var lm=await getLandmarker(mode);
   var face={found:false};
   if(lm){
     try{
-      var res = (mode==='VIDEO') ? lm.detectForVideo(src,performance.now()) : lm.detect(src);
+      var res=(mode==='VIDEO')?lm.detectForVideo(src,performance.now()):lm.detect(src);
       face=extractFace(res,sw,sh);
     }catch(e){ face={found:false}; }
   }
@@ -425,34 +573,33 @@ async function runAnalysis(src,sw,sh,mirror,mode){
   var ana=analyzeCrop(imgData.data,350,450,faceInCrop);
   var checks;
   if(!lm){
-    checks=[
-      {id:'chehra',ok:null,detail:'Chehra-wali jaanch load nahi ho payi — net check karke dobara try karo.'},
-      {id:'size',ok:null,detail:'Chehra-wali jaanch load nahi ho payi.'},
-      {id:'seedha',ok:null,detail:'Chehra-wali jaanch load nahi ho payi.'},
-      {id:'aankhen',ok:null,detail:'Chehra-wali jaanch load nahi ho payi.'},
-      {id:'kaan',ok:null,detail:'Chehra-wali jaanch load nahi ho payi.'},
-      {id:'roshni',ok:(ana.faceMean>=90&&ana.faceMean<=228),detail:ana.faceMean<90?'Photo me andhera hai — roshni badhao.':(ana.faceMean>228?'Bahut tez roshni hai.':'Roshni theek lag rahi hai.')},
-      {id:'background',ok:null,detail:'Chehra mile bina background pakka nahi kaha ja sakta.'},
-      {id:'sharp',ok:ana.blur>=55,detail:ana.blur>=55?'Photo sharp lag rahi hai.':'Photo dhundhli lag rahi hai.'}
-    ];
+    checks=CHECK_DEFS.map(function(d){
+      if(d.id==='roshni') return {id:d.id, ok:(ana.faceMean>=90&&ana.faceMean<=228), short:'Roshni theek nahi', detail:'Sirf roshni wali jaanch ho payi — chehra-wali jaanch load nahi hui, net check karke dobara try karo.'};
+      if(d.id==='sharp') return {id:d.id, ok:ana.blur>=55, short:'Photo dhundhli hai', detail:ana.blur>=55?'Photo sharp lag rahi hai.':'Photo dhundhli lag rahi hai.'};
+      return {id:d.id, ok:null, short:'', detail:'Chehra-wali jaanch load nahi ho payi — net slow hai, thodi der me dobara try karo.'};
+    });
   } else {
     checks=buildChecks({
-      faceFound:face.found,
+      faceFound:face.found, multiFace:!!face.multi,
       faceFracH:face.found?(face.box.h/crop.h):0,
-      rollDeg:face.found?face.rollDeg:0,
-      yaw:face.found?face.yaw:0,
-      blinkL:face.found?face.blinkL:null,
-      blinkR:face.found?face.blinkR:null,
+      centerDx:face.found?(((face.box.x+face.box.w/2)-crop.x)/crop.w - 0.5):0,
+      centerDy:face.found?(((face.box.y+face.box.h/2)-crop.y)/crop.h - 0.46):0,
+      rollDeg:face.found?face.rollDeg:0, yaw:face.found?face.yaw:0,
+      gaze:face.found?face.gaze:null,
+      blinkL:face.found?face.blinkL:null, blinkR:face.found?face.blinkR:null,
+      smile:face.found?face.smile:null, jawOpen:face.found?face.jawOpen:null,
       earsOk:face.found?face.earsOk:null,
-      faceMean:ana.faceMean, bg:ana.bg, blur:ana.blur
+      faceMean:ana.faceMean, shadowRatio:ana.shadowRatio, bg:ana.bg, blur:ana.blur,
+      exif:exif
     });
   }
   setChecks(checks);
   lastRender={src:src,crop:crop,mirror:mirror};
+  if(face.found&&face.features) lastFeatures=face.features;
   return checks;
 }
 
-/* ---------- Final photo render + download ---------- */
+/* ---------- Final photo ---------- */
 function renderFinal(){
   if(!lastRender) return;
   var out=document.createElement('canvas'); out.width=700; out.height=900;
@@ -489,12 +636,12 @@ $('btnStart').onclick=async function(){
   await video.play();
   $('camMsg').classList.add('hidden');
   $('btnStart').classList.add('hidden'); $('btnSnap').classList.remove('hidden'); $('btnStop').classList.remove('hidden');
-  status.textContent='Jaanch wala hissa load ho raha hai… pehli baar thoda time lag sakta hai.';
+  status.textContent='Chehra-pehchan load ho rahi hai… pehli baar 10–20 second lag sakte hain (net chahiye).';
   camRunning=true;
   var first=true;
   camTimer=setInterval(async function(){
     if(!camRunning||video.readyState<2) return;
-    await runAnalysis(video,video.videoWidth,video.videoHeight,true,'VIDEO');
+    await runAnalysis(video,video.videoWidth,video.videoHeight,true,'VIDEO',undefined);
     if(first){ first=false; status.textContent='Live jaanch chal rahi hai — chehra ghare me rakho, ✅ badhte jayenge.'; }
   },550);
 };
@@ -513,24 +660,61 @@ $('btnSnap').onclick=function(){
 };
 
 /* ---------- Upload ---------- */
-var drop=$('drop'), fileIn=$('fileIn');
-drop.onclick=function(){ fileIn.click(); };
-drop.ondragover=function(e){ e.preventDefault(); drop.classList.add('over'); };
-drop.ondragleave=function(){ drop.classList.remove('over'); };
-drop.ondrop=function(e){ e.preventDefault(); drop.classList.remove('over'); if(e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]); };
-fileIn.onchange=function(){ if(fileIn.files.length) handleFile(fileIn.files[0]); };
+function wireDrop(dropEl,inEl,handler){
+  dropEl.onclick=function(){ inEl.click(); };
+  dropEl.ondragover=function(e){ e.preventDefault(); dropEl.classList.add('over'); };
+  dropEl.ondragleave=function(){ dropEl.classList.remove('over'); };
+  dropEl.ondrop=function(e){ e.preventDefault(); dropEl.classList.remove('over'); if(e.dataTransfer.files.length) handler(e.dataTransfer.files[0]); };
+  inEl.onchange=function(){ if(inEl.files.length) handler(inEl.files[0]); };
+}
+wireDrop($('drop'),$('fileIn'),handleFile);
 function handleFile(file){
   if(!file||file.type.indexOf('image/')!==0){ $('upStatus').textContent='Sirf photo wali file dalo (JPG/PNG).'; return; }
+  $('upStatus').textContent='Photo ki jaanch ho rahi hai…';
+  file.arrayBuffer().then(function(buf){
+    var exif=exifParse(buf);
+    var url=URL.createObjectURL(file);
+    var img=new Image();
+    img.onload=async function(){
+      $('upImg').src=url; $('upStage').classList.remove('hidden');
+      await runAnalysis(img,img.naturalWidth,img.naturalHeight,false,'IMAGE',exif);
+      $('upStatus').textContent='Jaanch ho gayi — upar seedha jawab aur neeche saari tafseel hai.';
+      renderFinal();
+    };
+    img.onerror=function(){ $('upStatus').textContent='Ye photo khul nahi payi — dusri photo try karo.'; };
+    img.src=url;
+  });
+}
+
+/* ---------- Aadhaar match ---------- */
+wireDrop($('dropA'),$('fileInA'),handleAadhaar);
+function handleAadhaar(file){
+  var st=$('matchStatus');
+  if(!file||file.type.indexOf('image/')!==0){ st.textContent='Sirf photo wali file dalo (JPG/PNG).'; return; }
+  if(!lastFeatures){ st.textContent='Pehle upar apni photo check karo (camera ya upload) — uske baad Aadhaar photo dalo, tabhi milaan hoga.'; return; }
+  st.textContent='Aadhaar photo me chehra dhoondha ja raha hai…';
   var url=URL.createObjectURL(file);
   var img=new Image();
   img.onload=async function(){
-    $('upImg').src=url; $('upStage').classList.remove('hidden');
-    $('upStatus').textContent='Photo ki jaanch ho rahi hai…';
-    await runAnalysis(img,img.naturalWidth,img.naturalHeight,false,'IMAGE');
-    $('upStatus').textContent='Jaanch ho gayi — neeche dekho kya sahi hai, kya sudharna hai.';
-    renderFinal();
+    var lm=await getLandmarker('IMAGE');
+    if(!lm){ st.textContent='Chehra-pehchan load nahi ho payi — net check karke dobara try karo.'; return; }
+    var res;
+    try{ res=lm.detect(img); }catch(e){ res=null; }
+    var f=extractFace(res||{},img.naturalWidth,img.naturalHeight);
+    if(!f.found||!f.features){ st.textContent='Is photo me chehra saaf nahi mila — Aadhaar card ke chehre wala hissa paas se crop karke dalo.'; return; }
+    var cmp=compareFaces(lastFeatures,f.features);
+    if(!cmp){ st.textContent='Milaan nahi ho paya — dobara try karo.'; return; }
+    $('matchPct').textContent=cmp.score+'%';
+    var txt;
+    if(cmp.band==='kaafi') txt='✅ <b>Chehre ke naap kaafi milte hain</b> — andaza achha hai. Live photo aisi hi saaf rakho.';
+    else if(cmp.band==='thoda') txt='⚠️ <b>Chehron me thoda fark dikh raha hai</b> — live photo aur saaf, bilkul saamne se kheecho. Aadhaar photo purani ho to yahi fark aata hai.';
+    else txt='❌ <b>Chehron me kaafi fark dikh raha hai</b> — ye aksar tab hota hai jab Aadhaar photo bachpan ki ho. Form se pehle Aadhaar me photo update karana sabse pakka raasta hai.';
+    $('matchText').innerHTML=txt;
+    $('matchResult').classList.remove('hidden');
+    st.textContent='';
+    $('matchResult').scrollIntoView({behavior:'smooth',block:'center'});
   };
-  img.onerror=function(){ $('upStatus').textContent='Ye photo khul nahi payi — dusri photo try karo.'; };
+  img.onerror=function(){ st.textContent='Ye photo khul nahi payi — dusri photo try karo.'; };
   img.src=url;
 }
 </script>
